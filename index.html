@@ -8,55 +8,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            background: radial-gradient(circle at top center, #1f180b 0%, #030303 60%); 
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: radial-gradient(circle at top center, #1f180b 0%, #030303 60%);
             background-attachment: fixed;
         }
         .font-luxury { font-family: 'Playfair Display', serif; }
         .gold-text { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; color: transparent; }
-        
-        .luxury-card { 
-            background: linear-gradient(145deg, rgba(20,20,20,0.8), rgba(5,5,5,0.9)); 
-            backdrop-filter: blur(15px); 
-            border: 1px solid rgba(212, 175, 55, 0.15); 
+        .luxury-card {
+            background: linear-gradient(145deg, rgba(20,20,20,0.8), rgba(5,5,5,0.9));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8);
-            transition: all 0.4s ease; 
+            transition: all 0.4s ease;
         }
-        .luxury-card:hover { 
-            border-color: rgba(212, 175, 55, 0.5); 
+        .luxury-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
             transform: translateY(-3px);
             box-shadow: 0 15px 35px -5px rgba(212, 175, 55, 0.15);
         }
-        
         /* Custom Native Audio Player */
         audio { width: 100%; height: 40px; border-radius: 8px; outline: none; }
-        audio::-webkit-media-controls-panel { 
-            background-color: #0a0a0a; 
-            border: 1px solid rgba(212,175,55,0.2); 
+        audio::-webkit-media-controls-panel {
+            background-color: #0a0a0a;
+            border: 1px solid rgba(212,175,55,0.2);
         }
         audio::-webkit-media-controls-current-time-display,
-        audio::-webkit-media-controls-time-remaining-display { 
-            color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; 
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500;
         }
         audio::-webkit-media-controls-play-button,
-        audio::-webkit-media-controls-mute-button { 
-            filter: invert(70%) sepia(50%) saturate(400%) hue-rotate(5deg) brightness(100%) contrast(100%); 
+        audio::-webkit-media-controls-mute-button {
+            filter: invert(70%) sepia(50%) saturate(400%) hue-rotate(5deg) brightness(100%) contrast(100%);
         }
-
         .disc-spin { animation: spin 10s linear infinite; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body class="text-slate-300 antialiased pb-20 selection:bg-yellow-600/30 min-h-screen flex flex-col">
-    
+
     <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-[#d4af37] opacity-[0.03] blur-[100px]"></div>
         <div class="absolute top-[40%] -right-[20%] w-[60%] h-[60%] rounded-full bg-[#d4af37] opacity-[0.02] blur-[120px]"></div>
     </div>
 
     <main class="max-w-md mx-auto px-6 pt-16 space-y-10 flex-1 w-full relative z-10">
-        
         <div class="text-center space-y-5">
             <div class="w-20 h-20 mx-auto rounded-full border-2 border-[#d4af37]/30 flex items-center justify-center bg-black/60 shadow-[0_0_25px_rgba(212,175,55,0.15)] relative">
                 <div class="absolute inset-0 rounded-full border border-[#d4af37]/10 animate-ping opacity-20"></div>
@@ -74,31 +70,28 @@
         </div>
 
         <div class="space-y-6 mt-8">
-            
             <div class="luxury-card rounded-2xl p-6 relative overflow-hidden group">
                 <div class="absolute -right-6 -top-6 opacity-[0.03] text-9xl group-hover:opacity-[0.06] transition-opacity duration-500"><i class="fas fa-sun"></i></div>
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div class="mb-6">
                         <h2 class="font-luxury text-[#fcf6ba] text-2xl tracking-wide mb-1">The Sunlit Room</h2>
                     </div>
-                    <audio controls controlsList="noplaybackrate" class="w-full">
+                    <audio controls controlsList="noplaybackrate nodownload" class="w-full">
                         <source src="sunlit-room.mp4" type="audio/mp4">
                     </audio>
                 </div>
             </div>
-
             <div class="luxury-card rounded-2xl p-6 relative overflow-hidden group">
                 <div class="absolute -right-6 -top-6 opacity-[0.03] text-9xl group-hover:opacity-[0.06] transition-opacity duration-500"><i class="fas fa-dna"></i></div>
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div class="mb-6">
                         <h2 class="font-luxury text-[#fcf6ba] text-2xl tracking-wide mb-1">Mending The Gold Thread</h2>
                     </div>
-                    <audio controls controlsList="noplaybackrate" class="w-full">
+                    <audio controls controlsList="noplaybackrate nodownload" class="w-full">
                         <source src="gold-thread.mp4" type="audio/mp4">
                     </audio>
                 </div>
             </div>
-
         </div>
 
         <div class="pt-10 text-center">
@@ -106,7 +99,6 @@
                 <i class="fas fa-gem"></i> Dapatkan Akses Penuh
             </a>
         </div>
-
     </main>
 
     <footer class="relative z-10 pt-12 pb-6 text-center mt-8 border-t border-white/5">
