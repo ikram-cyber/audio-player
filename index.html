@@ -23,26 +23,18 @@
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8);
             transition: all 0.4s ease; 
         }
-        .luxury-card:hover, .luxury-card:active { 
+        .luxury-card:hover { 
             border-color: rgba(212, 175, 55, 0.5); 
             transform: translateY(-3px);
             box-shadow: 0 15px 35px -5px rgba(212, 175, 55, 0.15);
         }
         
-        /* Custom Native Audio Player */
         audio { width: 100%; height: 40px; border-radius: 8px; outline: none; }
-        audio::-webkit-media-controls-panel { 
-            background-color: #0a0a0a; 
-            border: 1px solid rgba(212,175,55,0.2); 
-        }
+        audio::-webkit-media-controls-panel { background-color: #0a0a0a; border: 1px solid rgba(212,175,55,0.2); }
         audio::-webkit-media-controls-current-time-display,
-        audio::-webkit-media-controls-time-remaining-display { 
-            color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; 
-        }
+        audio::-webkit-media-controls-time-remaining-display { color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; }
         audio::-webkit-media-controls-play-button,
-        audio::-webkit-media-controls-mute-button { 
-            filter: invert(70%) sepia(50%) saturate(400%) hue-rotate(5deg) brightness(100%) contrast(100%); 
-        }
+        audio::-webkit-media-controls-mute-button { filter: invert(70%) sepia(50%) saturate(400%) hue-rotate(5deg) brightness(100%) contrast(100%); }
 
         .disc-spin { animation: spin 10s linear infinite; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
@@ -55,7 +47,7 @@
         <div class="absolute top-[40%] -right-[20%] w-[60%] h-[60%] rounded-full bg-[#d4af37] opacity-[0.02] blur-[120px]"></div>
     </div>
 
-    <main class="max-w-md mx-auto px-6 pt-16 space-y-10 flex-1 w-full relative z-10">
+    <main class="max-w-md mx-auto px-6 pt-16 space-y-8 flex-1 w-full relative z-10">
         
         <div class="text-center space-y-5">
             <div class="w-20 h-20 mx-auto rounded-full border-2 border-[#d4af37]/30 flex items-center justify-center bg-black/60 shadow-[0_0_25px_rgba(212,175,55,0.15)] relative">
@@ -66,29 +58,32 @@
                 <h1 class="font-luxury text-4xl font-bold tracking-tight text-white mb-2">
                     Frequency <span class="gold-text italic">Vault</span>
                 </h1>
-                <p class="text-[#d4af37] text-[9px] uppercase tracking-[0.4em] font-medium">
-                    The Elite Subconscious Protocol
-                </p>
+                
+                <div class="mt-4 px-2">
+                    <span class="inline-block px-3 py-1 bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-full text-[#d4af37] text-[9px] uppercase tracking-widest mb-3">
+                        Free Exclusive Preview
+                    </span>
+                    <p class="text-slate-400 text-[11px] font-light leading-relaxed">
+                        Nikmati akses pratinjau gratis beresolusi tinggi ini sebagai pengantar profesional menuju pemulihan pikiran bawah sadar Anda.
+                    </p>
+                </div>
+
             </div>
             <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-2"></div>
         </div>
 
-        <div class="space-y-6 mt-8">
+        <div class="space-y-6 mt-6">
             
             <div class="luxury-card rounded-2xl p-6 relative overflow-hidden group">
                 <div class="absolute -right-6 -top-6 opacity-[0.03] text-9xl group-hover:opacity-[0.06] transition-opacity duration-500"><i class="fas fa-sun"></i></div>
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div class="mb-5">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_5px_#22c55e]"></span>
-                            <span class="text-[8px] text-green-400 uppercase tracking-widest font-bold">Ready to Play</span>
-                        </div>
                         <h2 class="font-luxury text-[#fcf6ba] text-xl tracking-wide mb-1">The Sunlit Room</h2>
                         <p class="text-[10px] text-slate-400 uppercase tracking-widest flex items-center gap-2">
                             <i class="fas fa-wave-square text-[#d4af37]/50"></i> Healing 432Hz & Miracle 528Hz
                         </p>
                     </div>
-                    <audio controls class="w-full">
+                    <audio controls controlsList="nodownload" class="w-full">
                         <source src="sunlit-room.mp4" type="audio/mp4">
                     </audio>
                 </div>
@@ -98,43 +93,20 @@
                 <div class="absolute -right-6 -top-6 opacity-[0.03] text-9xl group-hover:opacity-[0.06] transition-opacity duration-500"><i class="fas fa-dna"></i></div>
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div class="mb-5">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_5px_#22c55e]"></span>
-                            <span class="text-[8px] text-green-400 uppercase tracking-widest font-bold">Ready to Play</span>
-                        </div>
                         <h2 class="font-luxury text-[#fcf6ba] text-xl tracking-wide mb-1">Mending The Gold Thread</h2>
                         <p class="text-[10px] text-slate-400 uppercase tracking-widest flex items-center gap-2">
                             <i class="fas fa-wave-square text-[#d4af37]/50"></i> Theta Original Frequency
                         </p>
                     </div>
-                    <audio controls class="w-full">
+                    <audio controls controlsList="nodownload" class="w-full">
                         <source src="gold-thread.mp4" type="audio/mp4">
-                    </audio>
-                </div>
-            </div>
-
-            <div class="luxury-card rounded-2xl p-6 relative overflow-hidden group">
-                <div class="absolute -right-6 -top-6 opacity-[0.03] text-9xl group-hover:opacity-[0.06] transition-opacity duration-500"><i class="fas fa-brain"></i></div>
-                <div class="relative z-10 flex flex-col h-full justify-between">
-                    <div class="mb-5">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-yellow-600/50"></span>
-                            <span class="text-[8px] text-slate-500 uppercase tracking-widest font-bold">Slot Ready</span>
-                        </div>
-                        <h2 class="font-luxury text-white/50 text-xl tracking-wide mb-1">Deep Subconscious</h2>
-                        <p class="text-[10px] text-slate-600 uppercase tracking-widest flex items-center gap-2">
-                            <i class="fas fa-lock text-[#d4af37]/30"></i> Ultimate Frequency Blend
-                        </p>
-                    </div>
-                    <audio controls class="w-full opacity-50 grayscale">
-                        <source src="deep-subconscious.mp4" type="audio/mp4">
                     </audio>
                 </div>
             </div>
 
         </div>
 
-        <div class="pt-10 text-center">
+        <div class="pt-8 text-center">
             <a href="https://ikram-cyber.github.io/audio-hub" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-[#d4af37]/30 text-[#d4af37] text-[10px] uppercase tracking-widest hover:bg-[#d4af37] hover:text-black transition-all duration-300">
                 <i class="fas fa-gem"></i> Dapatkan Akses Penuh
             </a>
